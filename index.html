@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jar of Compliments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            padding: 20px;
+            background-image: url('assets\OIP.jfif'); /* Spy x Family Background */
+            background-size: cover;
+            background-position: center;
+        }
+        .jar {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .compliment {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #d63384;
+        }
+        button {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #b31c70;
+        }
+        .anime-icon {
+            width: 100px;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>💖 Siddhi's Jar of Compliments 💖</h1>
+    <p>Click the button below to receive a heartwarming compliment just for you!</p>
+    <div class="jar">
+        <img src="assets\Sticker.jfif" class="anime-icon" alt="Anya Forger - Spy x Family">  
+        <p class="compliment" id="complimentText">Click below to pick a compliment!</p>
+        <button onclick="getCompliment()">Pick a Compliment</button>
+        <br>
+        <img src="assets\download.jfif" class="anime-icon" alt="Miyo Saimori - My Happy Marriage">  
+    </div>
+
+    <script>
+        const compliments = [
+            "Siddhi, you have the most beautiful smile, and it lights up my world!",
+            "Every moment spent talking to you feels like a dream I never want to wake up from.",
+            "Siddhi, you make my heart race in the best way possible!",
+            "I wish I could bottle up your laughter because it’s the sweetest sound ever.",
+            "You are my favorite notification, my favorite thought, and my favorite everything!",
+            "Your kindness, your warmth, and your heart make you the most amazing person ever, Siddhi.",
+            "Siddhi, if I had to choose between breathing and thinking about you, I’d use my last breath to tell you how special you are!",
+            "You make my world so much brighter, just by being in it!",
+            "Siddhi, you are more magical than any fairy tale I've ever read!",
+            "If hugs could be sent through screens, you'd be getting the warmest and tightest one right now!",
+            "You are 'Sajera Sawera' part in my kun faya kun song life"
+        ];
+        
+        function getCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            document.getElementById("complimentText").textContent = compliments[randomIndex];
+        }
+    </script>
+</body>
+</html>
